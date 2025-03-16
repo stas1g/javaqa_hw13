@@ -12,6 +12,6 @@ public class SimpleTask extends Task {
 
     @Override
     public boolean matches(String query) {
-        return title.contains(query);
+        return title.toLowerCase().contains(query.toLowerCase());
     }
 }

@@ -12,8 +12,9 @@ public class Epic extends Task {
 
     @Override
     public boolean matches(String query) {
+        String lowerQuery = query.toLowerCase();
         for (String subtask : subtasks) {
-            if (subtask.contains(query)) {
+            if (subtask.toLowerCase().contains(lowerQuery)) {
                 return true;
             }
         }

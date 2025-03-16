@@ -24,6 +24,8 @@ public class Meeting extends Task {
 
     @Override
     public boolean matches(String query) {
-        return topic.contains(query) || project.contains(query);
+        String lowerQuery = query.toLowerCase();
+        return topic.toLowerCase().contains(lowerQuery) ||
+                project.toLowerCase().contains(lowerQuery);
     }
 }
